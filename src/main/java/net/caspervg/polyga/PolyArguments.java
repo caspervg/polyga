@@ -9,7 +9,7 @@ public class PolyArguments extends Arguments.Default {
     }
 
     public int numIterations() {
-        return 500;
+        return 5;
     }
 
 }
