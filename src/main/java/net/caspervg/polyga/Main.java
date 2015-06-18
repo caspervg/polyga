@@ -27,6 +27,7 @@ public class Main {
 
         System.out.println("Took " +((double) after - (double)before)/1000D);
 
+        System.out.println(solution.getFinalPopulation().size());
         System.out.println(solution.getBestOrganism());
         System.out.println(solution.getBestFitness());
     }
