@@ -6,6 +6,7 @@ import net.caspervg.jgaf.step.*;
 import net.caspervg.jgaf.step.breeder.BasicBreeder;
 import net.caspervg.jgaf.step.killer.BasicKiller;
 import net.caspervg.jgaf.step.selector.FitnessProportionateSelector;
+import net.caspervg.jgaf.step.selector.TournamentSelector;
 import net.caspervg.polyga.bean.Organism;
 import net.caspervg.polyga.bean.Polygon;
 
@@ -26,7 +27,8 @@ public class PolyStepProvider implements StepProvider<Organism> {
         this.mutator = new OrganismMutator(polygon);
         this.killer = new BasicKiller<>();
         this.optimizer = new Optimizer<>(fitter, new Goal.Maximum());
-        this.selector = new FitnessProportionateSelector<>(fitter);
+        //this.selector = new FitnessProportionateSelector<>(fitter);
+        this.selector = new TournamentSelector<>(fitter, 5);
     }
 
     @Override
