@@ -12,7 +12,7 @@
         <dependency>
             <groupId>net.caspervg.jgaf</groupId>
             <artifactId>jgaf</artifactId>
-            <version>0.6.7-SNAPSHOT</version>
+            <version>0.7-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>

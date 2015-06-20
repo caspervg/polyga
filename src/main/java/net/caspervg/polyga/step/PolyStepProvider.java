@@ -10,7 +10,7 @@ import net.caspervg.jgaf.step.selector.TournamentSelector;
 import net.caspervg.polyga.bean.Organism;
 import net.caspervg.polyga.bean.Polygon;
 
-public class PolyStepProvider implements StepProvider<Organism> {
+public class PolyStepProvider implements Provider<Organism> {
 
     private Fitter<Organism> fitter;
     private Creator<Organism> creator;
@@ -64,5 +64,10 @@ public class PolyStepProvider implements StepProvider<Organism> {
     @Override
     public Optimizer<Organism> optimizer() {
         return optimizer;
+    }
+
+    @Override
+    public Goal goal() {
+        return new Goal.Maximum();
     }
 }
